@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #quiz-container {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <h1>HTML Practice</h1>
+
+    <div class="question">
+        <p>Q1: Create an unordered list for Pizza and Burger</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(1)">Reveal Answer</button>
+        <div id="result-1"></div>
+    </div>
+
+    <div class="question">
+        <p>Q2: Create an ordered list for Shrek and Ghostbuster</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(2)">Reveal Answer</button>
+        <div id="result-2"></div>
+    </div>
+
+    <div class="question">
+        <p>Q3: Write the code that would produce the following webpage. You may only use these tags: &lt;body&gt; &lt;h1&gt; &lt;h3&gt; &lt;p&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt;</p>
+        <img src="https://i0.wp.com/www.bebeafrikana.com/wp-content/uploads/2024/03/laser-tag.jpg" alt="Laser tag" width = “700” height = “300”><br>
+		<textarea class="user-answer" rows="10" cols="50"></textarea>
+        <button onclick="revealAnswer(3)">Reveal Answer</button>
+        <div id="result-3"></div>
+    </div>
+
+    <div class="question">
+        <p>Q4: Add an image to your website using an external image URL</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(4)">Reveal Answer</button>
+        <div id="result-4"></div>
+    </div>
+
+    <div class="question">
+        <p>Q5: Add an image to your website. The image should be saved in the same folder as your code</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(5)">Reveal Answer</button>
+        <div id="result-5"></div>
+    </div>
+
+    <div class="question">
+        <p>Q6: Insert a text hyperlink into your website</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(6)">Reveal Answer</button>
+        <div id="result-6"></div>
+    </div>
+
+    <div class="question">
+        <p>Q7: Use an image as a hyperlink on your website</p>
+        <textarea class="user-answer" rows="4" cols="50"></textarea>
+        <button onclick="revealAnswer(7)">Reveal Answer</button>
+        <div id="result-7"></div>
+    </div>
+
+    <div class="question">
+        <p>Q8: Create a contact form for a "Contact Us" page that has name label, email label, message label, and a submit button</p>
+        <textarea class="user-answer" rows="10" cols="50"></textarea>
+        <button onclick="revealAnswer(8)">Reveal Answer</button>
+        <div id="result-8"></div>
+    </div>
+</div>
+
+<script>
+    function revealAnswer(questionNumber) {
+        var correctAnswers = [
+             "&lt;ul&gt;\n  &lt;li&gt;Pizza&lt;/li&gt;\n  &lt;li&gt;Burgers&lt;/li&gt;\n&lt;/ul&gt;",
+            "&lt;ol&gt;\n  &lt;li&gt;Shrek&lt;/li&gt;\n  &lt;li&gt;Ghostbusters&lt;/li&gt;\n&lt;/ol&gt;",
+            `&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;body&gt;\n  &lt;h1&gt;Laser tag&lt;/h1&gt;\n  &lt;h3&gt;Join us at Laser Tag!&lt;/h3&gt;\n  &lt;ul&gt;\n    &lt;li&gt;Modern equipment&lt;/li&gt;\n    &lt;li&gt;Friendly staff&lt;/li&gt;\n    &lt;li&gt;Glow in the dark&lt;/li&gt;\n  &lt;/ul&gt;\n  &lt;p&gt;Special offers&lt;/p&gt;\n  &lt;ol&gt;\n    &lt;li&gt;Buy two games get one free&lt;/li&gt;\n    &lt;li&gt;Free fries with any burger&lt;/li&gt;\n    &lt;li&gt;50% off if rollerskating too&lt;/li&gt;\n  &lt;/ol&gt;\n&lt;/body&gt;\n&lt;/html&gt;`,
+            `&lt;img src="source goes here" alt="Pizza" width="300" height="200"&gt;\nExample : &lt;img src="https://ichef.bbci.co.uk/food/ic/food.jpg" alt="Pizza" width="300" height="200"&gt;`,
+            `&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="300" height="200"&gt;`,
+            `&lt;a href="link url"&gt;link text&lt;/a&gt;\nExample : &lt;a href="https://www.google.co.uk"&gt;Click here to visit Google&lt;/a&gt;`,
+            `&lt;a href="link url"&gt; &lt;img src="image source goes here" alt="Pizza" width="300" height="200"&gt;&lt;/a&gt;\nExample : &lt;a href="https://www.google.co.uk"&gt; &lt;img src="https://ichef.bbci.co.uk/food/ic.jpg" alt="Pizza" width="300" height="200"&gt;&lt;/a&gt;`,
+            `&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n&lt;head&gt;\n  &lt;title&gt;Contact Form&lt;/title&gt;\n&lt;/head&gt;\n&lt;body&gt;\n  &lt;h2&gt;Contact Us&lt;/h2&gt;\n  &lt;form action="/submit-form" method="POST"&gt;\n    &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br&gt;\n   &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;\n   &ltlabel for="message"&gtMessage:&lt;/label&gt;&lt;br&gt;\n  &lt;textarea id="message" name="message" rows="4" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;\n  &lt;input type="submit" value="Submit"&gt;\n   &lt;/form&gt;\n &lt;/body&gt;\n &lt;/html&gt;`
+        ];
+
+        var userAnswer = document.getElementsByClassName('user-answer')[questionNumber - 1].value;
+        var resultDiv = document.getElementById('result-' + questionNumber);
+
+        resultDiv.innerHTML = "<pre><code>" + correctAnswers[questionNumber - 1] + "</code></pre>";
+    }
+</script>
+
+<footer>
+    <p>Copyright 2024 Mo Bello</p>
+</footer>
+
+</body>
+</html>
